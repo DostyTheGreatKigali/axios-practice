@@ -11,7 +11,27 @@ export default class PersonRemove extends React.Component {
     this.setState({ id: event.target.value });
   }
 
-  handleSubmit = event => {
+//    async handleSubmit(event) {
+//     event.preventDefault();
+
+//     // axios.delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
+//     //   .then(res => {
+//     //     console.log(res);
+//     //     console.log(res.data);
+//     //   })
+//     // API.delete(`users/${this.state.id}`)
+//     // .then(res => {
+//     //   console.log(res);
+//     //   console.log(res.data);
+//     // })
+
+//     const response = await API.delete(`users/${this.state.id}`);
+
+//     console.log(response);
+//     console.log(response.data);
+//   }
+
+   handleSubmit = event => {
     event.preventDefault();
 
     // axios.delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
@@ -19,11 +39,16 @@ export default class PersonRemove extends React.Component {
     //     console.log(res);
     //     console.log(res.data);
     //   })
-    API.delete(`users/${this.state.id}`)
-    .then(res => {
-      console.log(res);
-      console.log(res.data);
-    })
+    // API.delete(`users/${this.state.id}`)
+    // .then(res => {
+    //   console.log(res);
+    //   console.log(res.data);
+    // })
+
+    const response = API.delete(`users/${this.state.id}`);
+
+    console.log(response);
+    console.log(response.data);
   }
 
   render() {
